@@ -5,7 +5,7 @@ function drawGrid(cell) {
         cells.setAttribute('class', 'cell');
         grid.appendChild(cells);
         }
-    }
+}
 
 function drawPallete() {
     let colors = ['#9b4b40', '#de6b5c', '#e18279', '#d4a05b',
@@ -28,5 +28,18 @@ function drawPallete() {
 
 window.addEventListener('DOMContentLoaded', function() {
     drawGrid(2242)
+    let currentSelectedColor = '#000000'
+    let cells = document.querySelectorAll('.cell');
+    cells.forEach(element => {
+        element.addEventListener('click', function() {
+            element.style.backgroundColor = currentSelectedColor;
+        })
+    });
     drawPallete();
+    let colors = document.querySelectorAll('.color');
+    colors.forEach(element => {
+        element.addEventListener('click', function() {
+            currentSelectedColor = element.style.backgroundColor;
+        })
+    });
 });
