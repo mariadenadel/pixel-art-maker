@@ -29,6 +29,7 @@ function drawPallete() {
 window.addEventListener('DOMContentLoaded', function() {
     drawGrid(2242)
     let currentSelectedColor = '#000000'
+    updateBackgroundColorOfCurrentColorElement(currentSelectedColor)
     let cells = document.querySelectorAll('.cell');
     cells.forEach(element => {
         element.addEventListener('click', function() {
@@ -40,6 +41,12 @@ window.addEventListener('DOMContentLoaded', function() {
     colors.forEach(element => {
         element.addEventListener('click', function() {
             currentSelectedColor = element.style.backgroundColor;
+            updateBackgroundColorOfCurrentColorElement(currentSelectedColor);
         })
     });
 });
+
+function updateBackgroundColorOfCurrentColorElement(hexColor) {
+    let currentColor = document.getElementById('current-color');
+    currentColor.style.backgroundColor = hexColor;
+}
