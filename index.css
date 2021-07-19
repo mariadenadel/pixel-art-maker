@@ -3,7 +3,7 @@ body {
 }
 
 #paint-board {
-    /* height: 550px; */
+    height: 590px;
     width: 750px;
     background: rgb(229, 229, 229);
     margin: 50px 250px;
@@ -24,15 +24,27 @@ body {
 }
 
 #palette {
-    margin: 20px;
-    padding: 30px;
+    margin: 15px;
 }
 
 .color {
     border-radius: 10px;
     width: 20px;
     height: 20px;
-    background-color: teal;
     float: left;
     margin: 5px;
+
+}
+
+#text {
+    float: left;
+    color: rgb(204, 204, 204);
+}
+
+#current-color {
+    width: 40px;
+    height: 20px;
+    border: 1px solid rgb(204, 204, 204);
+    float: left;
+    background-color: white;
 }
